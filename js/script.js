@@ -8,7 +8,7 @@ Consigli del giorno:
 * Individuate gli elementi di cui avete bisogno per realizzare il programma.
 */
 const numbers = 5;
-const randomNumbers = getRandomNumbers(numbersInGame);
+const randomNumbers = getRandomNumbers(numbers);
 
 //alert
 randomNumbers.forEach((alertNumber) =>{
@@ -22,7 +22,7 @@ function start() {
     const userArray = [];
     const correctNumbers = [];
     const wrongNumbers = [];
-    for (let i = 0; i < numbersInGame; i++) {
+    for (let i = 0; i < numbers; i++) {
         const userNumbers = parseInt(prompt('Scrivi il numero che hai visto'));
         userArray.push(userNumbers);
     }
@@ -44,7 +44,7 @@ function start() {
 }
 
 //funzione per numeri casuali
-function getRndInteger() {
+function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 //funzione array numeri casuali
